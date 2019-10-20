@@ -13,13 +13,13 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
-        android:background="#233FDF"
+        android:background="@color/blue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_margin="4dp"
             android:id="@+id/txt_usersRow_id"
             android:textSize="20sp"
@@ -30,7 +30,7 @@
         <TextView
             android:layout_below="@id/txt_usersRow_id"
             android:layout_alignParentLeft="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_margin="4dp"
             android:id="@+id/txt_usersRow_name"
             android:textSize="20sp"
@@ -41,7 +41,7 @@
         <TextView
             android:layout_below="@id/txt_usersRow_name"
             android:layout_alignParentLeft="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_margin="4dp"
             android:id="@+id/txt_usersRow_email"
             android:textSize="20sp"
@@ -52,7 +52,7 @@
         <TextView
             android:layout_below="@id/txt_usersRow_email"
             android:layout_alignParentLeft="true"
-            android:textColor="#ffffff"
+            android:textColor="@color/white"
             android:layout_margin="4dp"
             android:id="@+id/txt_usersRow_phone"
             android:textSize="20sp"

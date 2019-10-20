@@ -13,14 +13,14 @@
         android:layout_width="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/rel_showFragment_parent"
-        android:background="#ffffff"
+        android:background="@color/white"
         android:focusableInTouchMode="true"
         android:layout_height="match_parent">
 
 
         <TextView
             android:textSize="22sp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:layout_centerHorizontal="true"
             android:id="@+id/txt_showFragment_albumid"
             android:text="Album Id : "
@@ -31,7 +31,7 @@
 
         <TextView
             android:textSize="22sp"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:id="@+id/txt_showFragment_photoid"
             android:layout_below="@id/txt_showFragment_albumid"
             android:layout_centerHorizontal="true"
@@ -52,8 +52,8 @@
             android:layout_centerHorizontal="true"
             android:id="@+id/txt_showFragment_title"
             android:layout_centerVertical="true"
-            android:textColor="#ffffff"
-            android:background="#233FDF"
+            android:textColor="@color/white"
+            android:background="@color/blue"
             android:textSize="22sp"
             tools:text="1 "
             android:layout_below="@id/img_showFragment_photo"
