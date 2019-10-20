@@ -4,12 +4,14 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.moeiny.reza.guesspic.presenter.PhotoService
 import com.moeiny.reza.showpics.viewmodel.AppViewModel
 import com.moeiny.reza.showpics.adapter.UserAdapter
+import com.moeiny.reza.showpics.databinding.ActivityMainBinding
 import com.moeiny.reza.showpics.model.entity.users.Users
 import com.moeiny.reza.showpics.utils.OptusCallback
 
@@ -22,22 +24,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var userAdapter: UserAdapter
     lateinit var context : Context
     lateinit var appViewModel: AppViewModel
-
+    var mBinding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
         context=this
         appViewModel= ViewModelProviders.of(this).get(AppViewModel::class.java);
-
-//        appViewModel.selectedAlbumId.observe(this, object : Observer<String>() {
-//            fun onChanged(@Nullable integer: Int?) {
-//                Log.i(TAG, "onChanged: ")
-//            }
-//        })
         setUpView()
         getUsersInfo()
-
     }
 
 

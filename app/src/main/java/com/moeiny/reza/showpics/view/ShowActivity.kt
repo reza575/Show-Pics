@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.moeiny.reza.showpics.R
+import com.moeiny.reza.showpics.databinding.ActivityShowBinding
 import com.moeiny.reza.showpics.viewmodel.AppViewModel
 import com.squareup.picasso.Picasso
 
@@ -16,10 +18,12 @@ class ShowActivity : AppCompatActivity() {
     lateinit var txttitle: TextView
     lateinit var imgPicUrl: ImageView
     lateinit var appViewModel: AppViewModel
+    var mBinding: ActivityShowBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_show)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_show);
+
         appViewModel= ViewModelProviders.of(this).get(AppViewModel::class.java);
 
         val bundle = intent.extras
@@ -27,7 +31,6 @@ class ShowActivity : AppCompatActivity() {
         appViewModel.setPhotoId(bundle?.getString("photoid").toString())
         appViewModel.seturl(bundle?.getString("url").toString())
         appViewModel.setTitle(bundle?.getString("title").toString())
-
         setUpView()
     }
 

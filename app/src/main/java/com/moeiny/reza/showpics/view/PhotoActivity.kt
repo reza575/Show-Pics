@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ import com.moeiny.reza.guesspic.presenter.PhotoService
 import com.moeiny.reza.showpics.R
 import com.moeiny.reza.showpics.viewmodel.AppViewModel
 import com.moeiny.reza.showpics.adapter.PhotosAdapter
+import com.moeiny.reza.showpics.databinding.ActivityPhotoBinding
 import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.utils.OptusCallback
 
@@ -23,17 +25,16 @@ class PhotoActivity : AppCompatActivity() {
     lateinit var id:String
     lateinit var context : Context
     lateinit var appViewModel: AppViewModel
-
+    var mBinding: ActivityPhotoBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_photo)
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_photo);
         context=this
         appViewModel= ViewModelProviders.of(this).get(AppViewModel::class.java);
 
         val bundle = intent.extras
         appViewModel.setAlbumId (bundle?.getString("albumId").toString())
-
         getPhotoInfo()
         setUpView()
     }
