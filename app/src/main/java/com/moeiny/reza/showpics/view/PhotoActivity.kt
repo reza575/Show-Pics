@@ -12,7 +12,7 @@ import com.moeiny.reza.guesspic.presenter.PhotoService
 import com.moeiny.reza.showpics.R
 import com.moeiny.reza.showpics.viewmodel.AppViewModel
 import com.moeiny.reza.showpics.adapter.PhotosAdapter
-import com.moeiny.reza.showpics.model.entity.Photo
+import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.utils.OptusCallback
 
 class PhotoActivity : AppCompatActivity() {

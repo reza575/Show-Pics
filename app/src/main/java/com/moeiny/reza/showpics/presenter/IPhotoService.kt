@@ -1,6 +1,6 @@
 package com.moeiny.reza.guesspic.presenter
 
-import com.moeiny.reza.showpics.model.entity.Photo
+import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.model.entity.users.Users
 import com.moeiny.reza.showpics.utils.OptusCallback
 

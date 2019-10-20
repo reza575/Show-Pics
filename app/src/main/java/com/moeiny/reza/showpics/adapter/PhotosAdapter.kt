@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.moeiny.reza.showpics.R
-import com.moeiny.reza.showpics.model.entity.Photo
+import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.view.ShowActivity
 import com.squareup.picasso.Picasso
 
@@ -25,7 +25,7 @@ class PhotosAdapter(var context:Context, var photoList:List<Photo>):RecyclerView
     }
 
     override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
-        var photo:Photo=photoList.get(position)
+        var photo: Photo =photoList.get(position)
         Picasso.get().load(photo.thumbnailUrl).into(holder.imgPicUrl)
         holder.txttitle.setText(photo.title)
 

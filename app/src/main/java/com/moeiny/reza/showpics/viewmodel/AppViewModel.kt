@@ -1,7 +1,7 @@
 package com.moeiny.reza.showpics.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.moeiny.reza.showpics.model.entity.Photo
+import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.model.entity.users.Users
 
 class AppViewModel: ViewModel() {

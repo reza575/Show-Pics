@@ -1,6 +1,6 @@
 package com.moeiny.reza.guesspic.model.repository
 
-import com.moeiny.reza.showpics.model.entity.Photo
+import com.moeiny.reza.showpics.entity.Photo
 import com.moeiny.reza.showpics.model.entity.users.Users
 import io.reactivex.Flowable
 import retrofit2.Retrofit
